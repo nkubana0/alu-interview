@@ -2,6 +2,8 @@
 """
 Module
 """
+
+
 def rain(walls):
     if not walls:
         return 0
@@ -9,7 +11,6 @@ def rain(walls):
     n = len(walls)
     left_max = [0] * n
     right_max = [0] * n
-
 
     left_max[0] = walls[0]
     for i in range(1, n):
@@ -24,6 +25,7 @@ def rain(walls):
         total_water += min(left_max[i], right_max[i]) - walls[i]
 
     return total_water
+
 
 # Test cases
 if __name__ == "__main__":
